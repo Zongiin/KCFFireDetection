@@ -1,5 +1,6 @@
 # KCFFireDetection
 한국코드페어2020빌더스챌린지 출품작
+![image](teslastock.png)
 
 프로그램 구조
 --------------
