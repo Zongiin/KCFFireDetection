@@ -16,6 +16,10 @@ monkey.py는 yolov4 weight를 tensorflow용으로 변환하여 화재 감지에 
 
 수백장의 화재 사진에 불이 난 부분을 표시한 뒤, 위의 코랩 노트북을 통해 클라우드에 화재 사진을 업로드하고 그 데이터를 통해 학습시킨 weight를 [tensorflow-yolov4-tflite](https://github.com/hunglc007/tensorflow-yolov4-tflite)을 통해 tensorflow용 weight로 변환하여 사용했다.
 
+    !unzip /content/drive/My\ Drive/darknet/img.zip -d /content/darknet/data/obj
+    
+    !./darknet detector train /content/darknet/data/obj.data /content/darknet/cfg/yolov4-obj.cfg /content/darknet/yolov4.conv.137 -dont_show
+
 ### webandmapdispalay.html
 monkey.py는 opencv, tensroflow, PIL등 여러 모듈을 사용하며, 이를 통해 입력받은 영상에서 화재를 감지하고 화면 상에 화재의 위치와 범위를 네모로 표시한 영상 화면을 출력한다. 그리고 화재가 감지되면 http의 post메소드로 javascirptoed폴더에 있는 서버 프로젝트에 주소를 보낸다.
 
